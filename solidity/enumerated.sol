@@ -3,7 +3,8 @@ pragma solidity 0.8.26;
 
 // enum is a userdefined type that stores set of named/predefined values or integram constant
 // enum is set so avoid repeatation
-// eg. 7 days of week{sun,mon,tue..}, 12 month in year{jan,feb...},
+// eg. 7 days of week{sun,mon,tue..}, 12 month in year{jan,feb...}
+
 contract enum1{
     enum FreshJuice{small,medium,large}
     FreshJuice choice;
@@ -11,6 +12,14 @@ contract enum1{
 
     function setLarge() public {
         choice = FreshJuice.large;
+    }
+
+    function setSmall() public {
+        choice = FreshJuice.small;
+    }
+
+    function setMedium() public {
+        choice = FreshJuice.medium;
     }
 
     function getChoice() public view returns(FreshJuice) {
